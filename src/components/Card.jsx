@@ -17,7 +17,7 @@ export const Card = ({ imagen, titulo, descripcion, precio, handleAgregar, hanld
 
   return (
 
-    <div className="tarjeta container">
+    <div className="tarjeta container ">
       
           
         <img src={imagen} alt={titulo} className="tarjeta-imagen" />
@@ -25,12 +25,12 @@ export const Card = ({ imagen, titulo, descripcion, precio, handleAgregar, hanld
         <div className="tarjeta-conenido">
         <h3 className="tarjeta-titulo">{titulo}</h3>
         <p className="tarjeta-descripcion">{descripcion}</p>
-        <p className="tarjeta-precio">{precio}</p>
+        <h4 className="tarjeta-precio">${precio}</h4>
    {/*Este condicional es para saber si hay elementos para quitar o agregar al carrito, dependiendo lo que haya, activara un boton o ambos */}
         {
-            added ? <button type="button" className="boton-eliminar" onClick={clickEliminar}>Agregado</button> :
+            added ? <button type="button" className="boton-eliminar" onClick={clickEliminar}>AGREGADO</button> :
 
-            <button type="button" className="boton-agregar" onClick={clickAgregar}>Agregar</button>
+            <button type="button" className="boton-agregar" onClick={clickAgregar}>AGREGAR</button>
         }
         </div>
         

@@ -1,18 +1,32 @@
+/*Container para el GRID*/
+.container-products{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+/*Globales*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+/*Productos'*/
 .tarjeta {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
     
   }
   
   .tarjeta-imagen {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+
   }
   
  
@@ -26,35 +40,40 @@
   }
   
   .tarjeta-precio {
-    margin: 0;
-    font-weight: bold;
+    color: #000;
+    font-weight: 700;
+    margin: 15px 0;
   }
   
   .boton-agregar {
     background-color: #4caf50;
-    color: white;
+   
+    color: #fff;
     border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
     cursor: pointer;
+    margin-top: auto;
   }
   
   .boton-agregar:hover {
-    background-color: #45a049;
+    background-color: #3beb7e;
   }
-  .boton-quitar {
-    background-color: #af4c4c;
-    color: white;
+  .boton-eliminar {
+    background-color: #4caf50;
+    background-color: #000;
+    color: #fff;
     border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
     cursor: pointer;
+    margin-top: auto;
+    
   }
   
-  .boton-quitar:hover {
-    background-color: #a04545;
-  }
-  
+ 
   /* Estilos para el carrito */
   .carrito {
     display: flex;
@@ -62,3 +81,28 @@
     justify-content: space-between;
   }
   
+  /*Navegacion*/
+  .navegacion {
+    max-width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem; 
+    background-color: #b0ebfd;
+}
+
+.footer {
+  max-width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem; 
+  background-color: #b0ebfd;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+ 
+  text-align: center;
+  font-size: 1rem;
+}
