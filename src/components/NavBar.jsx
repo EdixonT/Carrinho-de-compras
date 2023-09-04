@@ -7,12 +7,14 @@ import '../styles/card.css'
 
 
 
-export const NavBar = () =>  {
 
+export const NavBar = () =>  {
+    
     const {listaCompras} = useContext(CarritoContext)
     return (
         <>
         <nav class="navegacion">
+
         <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">TIENDA</a>
         
     

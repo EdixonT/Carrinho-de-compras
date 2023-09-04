@@ -8,13 +8,13 @@ import './styles/card.css'
 
 
 
-
 export const CarritoApp = () => {
   return (
  /*Esta Etiqueta "Routes", es para entrelazar las distintas paginas y que se puedan conectar entre si */ 
     <ProductosProvider>
       <CarritoProvider>
         <NavBar></NavBar>
+       
         <div className="container">
         <Routes>
             <Route path="/" element={<div className="container-products"><ComprasPage></ComprasPage></div>}>
@@ -24,10 +24,12 @@ export const CarritoApp = () => {
             <Route path="/*" element={<Navigate to='/' />}>
             </Route>
         </Routes>
-        
+
         </div>
         
     </CarritoProvider>
+    
     </ProductosProvider>
+   
   )
 }
