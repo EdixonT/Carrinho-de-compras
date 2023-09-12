@@ -1,5 +1,5 @@
 # Proyecto creado en React por motivos del curso 2023, FRONT-END en la TOTTI.
-  - El tema seleccionado para el desenvolvimiento del proyecto, fue una pequeña tienda virtual, con una pagina que muestra algunos productos traidos de una API(FakeStore: https://fakestoreapi.com/products)que proveé los productos con sus respectivas descripciones.
+  - El tema seleccionado para el desenvolvimiento del proyecto, fue una pequeña tienda virtual, con una pagina que muestra algunos productos traidos de una API(FakeStore: https://fakestoreapi.com/products) que proveé los productos con sus respectivas descripciones.
   - Tambien a su vez cuenta con un Carrito de compras donde se adicioran los productos seleccionados, y en el mismo carrito se puede aumentar la cantidad de productos o incluso eliminar los mismos.
   - Tiene un boton para finalizar la compra, que cuando es presionado realiza un print a la pantalla emitiendo un PDF con los productos seleccionados.
   - Espero y les guste este pequeño proyecto.

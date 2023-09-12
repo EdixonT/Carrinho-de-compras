@@ -19,9 +19,9 @@ export const Card = ({ imagen, titulo, descripcion, precio, handleAgregar, hanld
 
     <div className="tarjeta container ">
       
-          
+        <a className="tarjeta-imagen" href=""> 
         <img src={imagen} alt={titulo} className="tarjeta-imagen" />
-        
+        </a> 
         <div className="tarjeta-conenido">
         <h3 className="tarjeta-titulo">{titulo}</h3>
         <p className="tarjeta-descripcion">{descripcion}</p>

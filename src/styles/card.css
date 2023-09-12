@@ -6,13 +6,64 @@
 }
 
 /*Globales*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 a {
   text-decoration: none;
 }
+.error{
+  text-align: center;
+  color: red;
+}
+body {
+  
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
 
+}
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+h1, h2, h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+/*Header*/
+
+.header {
+  background-color: #dcf0f7;
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: left;
+}
 /*Productos'*/
 .tarjeta {
   flex: 25%;
@@ -86,10 +137,11 @@ a {
     max-width: 100%;
     padding: 1rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 2rem; 
     background-color: #b0ebfd;
 }
+
 
 .footer {
   max-width: 100%;
@@ -106,3 +158,72 @@ a {
   text-align: center;
   font-size: 1rem;
 }
+
+/*Formulario*/
+/** Contacto **/
+.formulario {
+  background-color: #b0ebfd;
+  width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+}
+.campo textarea {
+  height: 20rem;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+/*Botones*/
+.boton {
+  background-color: rgb(21, 255, 13);
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  margin-left: 70%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+  
+}
+@media (min-width: 768px) {
+  .boton {
+      width: auto;
+  }
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: #3beb7e;
+}
+
