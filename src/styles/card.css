@@ -16,6 +16,8 @@ html {
 }
 a {
   text-decoration: none;
+  color: #000;
+  font-weight: normal;
 }
 .error{
   text-align: center;
@@ -39,31 +41,39 @@ a {
   max-width: 120rem;
   margin: 0 auto;
 }
-h1, h2, h3 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+.icono{
+  width:  10rem;
+  height: 2rem;
 }
-h1 {
-  font-size: 4rem;
-}
-h2 {
-  font-size: 3.2rem;
-}
-h3 {
-  font-size: 2.4rem;
-}
+
 /*Header*/
 
 .header {
-  background-color: #dcf0f7;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #9de3f7;
+	color: #fff;
+  margin-bottom: 1rem;
 }
 .header__logo {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: left;
+  width: 20rem;
+  padding: 2rem;
 }
+/*Navegacion*/
+.navegacion, .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+
+}
+
+
 /*Productos'*/
 .tarjeta {
   flex: 25%;
@@ -96,35 +106,7 @@ h3 {
     margin: 15px 0;
   }
   
-  .boton-agregar {
-    background-color: #4caf50;
-   
-    color: #fff;
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    cursor: pointer;
-    margin-top: auto;
-  }
   
-  .boton-agregar:hover {
-    background-color: #3beb7e;
-  }
-  .boton-eliminar {
-    background-color: #4caf50;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    cursor: pointer;
-    margin-top: auto;
-    
-  }
-  
- 
   /* Estilos para el carrito */
   .carrito {
     display: flex;
@@ -132,16 +114,7 @@ h3 {
     justify-content: space-between;
   }
   
-  /*Navegacion*/
-  .navegacion {
-    max-width: 100%;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem; 
-    background-color: #b0ebfd;
-}
-
+  
 
 .footer {
   max-width: 100%;
@@ -225,5 +198,45 @@ h3 {
 .boton:hover {
   cursor: pointer;
   background-color: #3beb7e;
+}
+.boton-agregar {
+  background-color: #4caf50;
+ 
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.boton-agregar:hover {
+  background-color: #3beb7e;
+}
+.boton-eliminar {
+  background-color: #4caf50;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+  
+}
+.btn-logout {
+	border: none;
+	background: rgb(255, 240, 36);
+	padding: 5px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-logout:hover {
+	background-color: red;
+	color: #000;
 }
 

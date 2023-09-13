@@ -1,42 +1,60 @@
+import { useNavigate } from 'react-router-dom'
+import { useForm } from '../hook/useForm'
 import '../styles/card.css'
+
 export const RegistroPage = () => {
-  return (
+    
+    const navigate = useNavigate()
+
+    {/*Aqui llamaremos el Use Form y validaremos los campos del formulario */}
+    const {name, email, password, onInputChange, onResetForm} = useForm({
+        name:'',
+        email: '',
+        password: '',
+    })    
+    
+    const onRegister = (e) => {
+        e.preventDefault()
+
+        navigate('/compras', {
+            replace: true,
+            state:{
+                logged: true,
+                name
+            } 
+            })
+
+        onResetForm()
+    }
+
+    return (
     <>
-            <form class="formulario" >
+        <form class="formulario" onSubmit={onRegister}>
                 <fieldset>
                     <legend>Registro</legend>
 
                     <div class="contenedor-campos">
 
                         <div class="campo">
-                            <label>Nombre</label>
-                            <input class="input-text" type="text" placeholder="Nombre" /> 
+                            <label htmlFor='name'>Nombre</label>
+                            <input class="input-text" type="text" name='name' id='name' value={name} onChange={onInputChange} required autoComplete='off'/> 
                         </div>
                         <div class="campo">
-                            <label>Apellido</label>
-                            <input class="input-text" type="text" placeholder="Apellido" /> 
-                        </div>
-                        <div class="campo">
-                            <label>Correo</label>
-                            <input class="input-text" type="email" placeholder="E-mail" /> 
-                        </div>
-                        <div class="campo">
-                            <label>Usuario</label>
-                            <input class="input-text" type="text" placeholder="Usuario" /> 
+                            <label htmlFor='email'>Correo</label>
+                            <input class="input-text" type="email" name='email' id='email' value={email} onChange={onInputChange} required autoComplete='off' /> 
                         </div>
                 
                         <div class="campo">
-                            <label>Contraseña</label>
-                            <input class="input-text" type="paassword" placeholder="Contraseña"  />
+                            <label htmlFor='password'>Contraseña</label>
+                            <input class="input-text" type="paassword" name='password' id='password' value={password} onChange={onInputChange} required autoComplete='off'  />
                         </div>
                     </div>
 
                     <div class="alinear-derecha flex">
-                    <input class="boton w-sm-100" type="submit" value="Registrarse" />
+                    <input class="boton w-sm-100" type="submit" value="Iniciar Sesion" />
                     </div>
                 </fieldset>
             </form>
-
         </>
   )
 }

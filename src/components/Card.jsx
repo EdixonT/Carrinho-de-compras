@@ -32,6 +32,7 @@ export const Card = ({ imagen, titulo, descripcion, precio, handleAgregar, hanld
 
             <button type="button" className="boton-agregar" onClick={clickAgregar}>AGREGAR</button>
         }
+
         </div>
         
     </div>
