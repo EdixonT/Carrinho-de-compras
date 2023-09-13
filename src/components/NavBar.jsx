@@ -11,6 +11,7 @@ import logo from "../assets/logo.png"
 
 
 
+
 export const NavBar = () => {
 
     const { listaCompras } = useContext(CarritoContext)
@@ -22,6 +23,27 @@ export const NavBar = () => {
             replace: true,
         })
     }
+    const newProducto = () =>{
+        fetch('https://fakestoreapi.com/products',{
+            method:"POST",
+            body:JSON.stringify(
+                {
+                    title: 'test product',
+                    price: 13.5,
+                    description: 'lorem ipsum set',
+                    image: 'https://i.pravatar.cc',
+                    category: 'electronic'
+                }
+            )
+        })
+        .then(res=>{
+            if(res.ok){
+              console.warn(res)
+            }
+            
+          })
+
+        }
 
     return (
         <>
@@ -38,7 +60,7 @@ export const NavBar = () => {
                         
                         <div>
                         <NavLink to='/carrito'>
-                            <Badge  badgeContent={listaCompras.length} color="secondary">
+                            <Badge  badgeContent={listaCompras.length} color="secondary" size="large">
                                 <ShoppingCart  color="action" />
                             </Badge>
                         </NavLink>
@@ -46,6 +68,7 @@ export const NavBar = () => {
 
                         <div className="user">
                             <span>{state?.name}</span>
+                            <button className='btn-producto'  onClick={newProducto}>Nuevo Producto</button>
                             <button className='btn-logout'onClick={onLogout}>Cerrar Sesion</button>
                         </div>
                         </nav>

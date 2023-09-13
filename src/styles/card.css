@@ -69,6 +69,7 @@ a {
   padding: 15px;
   color: #ffffff;
   text-transform: uppercase;
+  font-size: bold;
 
 
 }
@@ -106,7 +107,11 @@ a {
     margin: 15px 0;
   }
   
-  
+  .tarjeta-conenido-admin{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
   /* Estilos para el carrito */
   .carrito {
     display: flex;
@@ -209,10 +214,26 @@ a {
   padding: 20px 0;
   cursor: pointer;
   margin-top: auto;
+  border-radius: .5rem;
 }
 
 .boton-agregar:hover {
   background-color: #3beb7e;
+}
+.boton-editar{
+  background-color: #ffe137;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+
+.boton-editar:hover {
+  background-color: #cde643;
 }
 .boton-eliminar {
   background-color: #4caf50;
@@ -222,10 +243,38 @@ a {
   display: block;
   width: 100%;
   padding: 20px 0;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+
+/*Boton eliminar Admin*/
+.boton-eliminar-admin {
+  background-color: #4caf50;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
   cursor: pointer;
   margin-top: auto;
-  
+  border-radius: .5rem;
 }
+.boton-eliminar-admin:hover {
+  background-color: #ff2727;
+}
+.btn-producto{
+  border: none;
+	background:  #4caf50;
+	padding: 5px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-producto:hover {
+background-color: #3beb7e;
+}
+
 .btn-logout {
 	border: none;
 	background: rgb(255, 240, 36);

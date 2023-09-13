@@ -5,11 +5,13 @@ export const ComprasProvider = ({ children }) => {
     
     const [productos, setProductos] = useState([])
     
+
     const fetchProductos = async() => {
           const response = await fetch('https://fakestoreapi.com/products')
           const data = await response.json()
           setProductos(data)
-
+    
+    
           
   }
 
@@ -19,7 +21,7 @@ export const ComprasProvider = ({ children }) => {
 
  
     return (
-
+        
     <ComprasContext.Provider value={{productos}}>
         {children}
     </ComprasContext.Provider>
